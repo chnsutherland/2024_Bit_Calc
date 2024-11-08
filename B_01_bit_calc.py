@@ -24,10 +24,10 @@ def get_filetype():
         elif response in ['integer', 'int']:
             return "integer"
 
-        elif response in ['image', 'img']:
+        elif response in ['image', 'img', 'picture', 'p']:
             return "image"
 
-        elif response in ['text', 'txt']:
+        elif response in ['text', 'txt', 't']:
             return "text"
 
         else:
@@ -104,7 +104,7 @@ while True:
         else:
             file_type = "image"
 
-    if file_type == "image" 
+    if file_type == "image":
         image_ans = image_calc()
         print(image_ans)
     elif file_type == "integer":
