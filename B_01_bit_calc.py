@@ -6,17 +6,23 @@ def instructions():
     statement_generator("Instructions", "-")
 
     print('''
-Instructions go here.
-- instruction 1
-- instruction 2
-- etc
+- Choose a file type (integer / image / text)
+- Answer the questions the program asks
+
+It will output the number of bits needed to store the data.
+
+Press 'xxx' to exit.
+
+:)
+
     ''')
 
 
+# file type
 def get_filetype():
     while True:
 
-        response = input("File type: ").lower()
+        response = input("\nFile type: ").lower()
 
         if response == "xxx" or response == "i":
             return response
@@ -34,6 +40,8 @@ def get_filetype():
             print("Please enter a valid file type")
 
 
+# text stuff
+
 def calc_text_bits():
     pass
 
@@ -45,6 +53,7 @@ def calc_text_bits():
     answer = f"{response} has {num_chars} characters. We need {num_chars} * 8 bits to represent it which is {num_bits} bits"
 
     return answer
+
 
 def int_check(question, low):
     error = "Invalid value\n"
