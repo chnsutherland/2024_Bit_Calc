@@ -1,8 +1,10 @@
 def statement_generator(statement, decoration):
+    """Decorates statements to make them stand out"""
     print(f"{decoration * 5} {statement} {decoration * 5}")
 
 
 def instructions():
+    """Outputs instructions"""
     statement_generator("Instructions", "-")
 
     print('''
@@ -20,6 +22,8 @@ Press 'xxx' to exit.
 
 # file type
 def get_filetype():
+    """Checks users put in a valid file type"""
+
     while True:
 
         response = input("\nFile type: ").lower()
@@ -88,9 +92,10 @@ def integer_calc():
     raw_binary = bin(integer)
 
     binary = raw_binary[2:]
-    num_bits = len(raw_binary)
 
-    answer = f"{integer} in binary is {binary}. {num_bits} can represent it"
+    num_bits = len(binary)
+
+    answer = f"{integer} in binary is {binary}.  We need {num_bits} to represent it"
 
     return answer
 
